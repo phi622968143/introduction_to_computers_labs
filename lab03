@@ -1,0 +1,13 @@
+num=input("pls enter num")#set num(str)
+if int(num)%2==0:#str to int ,if mod 2 =0 
+    print("even")#print even
+else:#mod 2!=0
+    print("odd")#print odd
+ch=input("pls enter first charater of student ID")#set charater of ID
+student_num=input("pls enter student ID last 8 digits")#set digits of ID
+if int(student_num)%2==0:#str to int ,if mod 2 =0 
+    print("your student num is even")#print even
+else:#mod 2!=0
+    print("your student num is odd")#print odd
+print("your student num is"+ch+student_num)#combine charater and 
+                                           #digits(str)
