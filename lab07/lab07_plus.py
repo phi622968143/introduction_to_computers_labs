@@ -45,11 +45,17 @@ class Shiba(animal):
         self.mood = self.mood+5*times
 
     def shimood(self):  # self mean inher the class attribute
-        if (self.mood > 100):
-            print("mood最高為100")
+        if (self.mood > 90):
+            print("mood最高只能為90")
+            self.mood=90
+            print("所以柴犬的心情 ",str(self.mood))
+    def shimood2(self):
+        if(self.mood<300):
+            print("mood最高只能為300")
+        
 shiba=Shiba(5,70)
-shiba.dogswalk(10)
+shiba.dogswalk(12)
 shiba.shifeed(20)
-shiba.dogsbath(4)
+shiba.dogsbath(3)
 print("柴犬現在的體重= "+str(shiba.weight)+"kg, 心情 "+str(shiba.mood))
 shiba.shimood()
