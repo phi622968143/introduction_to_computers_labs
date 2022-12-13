@@ -10,7 +10,6 @@ def permutations(array):
             array[0], array[i] = array[i], array[0]#決定第一個固定的數字
             start = array[0]
             end = permutations(array[1:])#往下切陣列
-            print(end)
             for x in end:
                 arr.append([start]+x)#頭加尾
     return arr
