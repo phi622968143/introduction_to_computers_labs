@@ -10,7 +10,6 @@ weather=[[17.5, 20.4, 22.5, 23.9, 27.3, 29.5, 29.4, 28.9, 28.6, 25.7, 22.8, 18.0
  [19.7, 22.0, 22.5, 26.0, 26.9, 29.3, 29.2, 28.7, 28.4, 27.1, 23.5, 19.8],
  [19.0, 20.0, 23.3, 23.4, 28.1, 30.1, 30.2, 28.8, 29.3, 26.8, 24.2, 20.1],
  [16.5, 19.7, 22.4, 24.6, 29.0, 28.3, 29.1, 28.4, 29.5, 27.3, 23.2, 19.3]]
-#first pb
 years = np.array(range(2013,2022))
 years = np.arange(2013,2022)
 years=list(map(str,years))
@@ -18,6 +17,7 @@ month=[1,2,3,4,5,6,7,8,9,10,11,12]
 s=[]
 av=[]
 
+#first pb
 fig = plt.figure()
 for i in range(9):
 	plt.plot(month,weather[i], label=years[i])
@@ -51,7 +51,6 @@ plt.tight_layout() #讓子圖之間適當排列不重疊
 fig.set_size_inches(5, 5)
 fig.savefig('lab13_02.png')
 
-
 #pb3
 fig = plt.figure(figsize=(15,6))
 fig.add_subplot(1, 2, 1)
@@ -65,10 +64,7 @@ plt.ylabel('T in °C')
 plt.xticks(range(1,13,1))
 plt.legend()
 
-
 plt.subplot(1,2,2)
-
-
 plt.plot(month,av,'-o',markerfacecolor='r')
 plt.title('Tainan average monthly T 2013~21')
 plt.xlabel('month')
@@ -80,8 +76,9 @@ plt.text(x=2,y=sum(av)/12,s=str(round(sum(av)/12,2)),horizontalalignment='right'
 for i in range(12):#asssign the position and content of each txt 
     plt.text(x = month[i], y =av[i], s=a[i], fontsize=10)
 plt.legend()
+
 plt.tight_layout() #讓子圖之間適當排列不重疊
-#plt.show()
+plt.show()
 
 fig.savefig('lab13_03.png')
 
